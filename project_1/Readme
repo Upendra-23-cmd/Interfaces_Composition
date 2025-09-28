@@ -1,0 +1,38 @@
+==> Question : Write a program to Create an Animal interface and implement Dog, Cat, Bird.
+
+*  what is interface?
+==> An interface is a type that specifies a set of methods.
+If a type (like struct) has those methods , it automatically implements it
+
+
+* Think of it like this
+=> An Interface is like a job description
+   A struct is like a candidate
+   If a candidate has all the requried kills , then it qualifies for the job
+
+*  Key Takeaways
+   1. An interface defines behavior, not data.
+   2. Go uses struct + interface instead of class + inheritance.
+   3. They are powerful for abstraction, polymorphism, decoupling, and testing.
+   4. Widely used in Go’s standard library (io.Reader, io.Writer, http.Handler, etc.).
+
+*  Benefits of Using an Interface
+
+   Polymorphism (one variable, many behaviors)
+                                       :- You can treat Dog, Cat, Bird all as Animal and call speak() without caring what the actual type is.
+   Code Flexibility
+                                       :- If later you add a new animal Lion, you don’t change the main logic — just implement speak() for Lion.
+   Abstraction
+                                       :- Your code depends on the behavior (speak() string) instead of the concrete type (Dog).
+   Testing
+                                       :- You can swap real implementations with mock ones.
+                                         Example: Instead of using a real Database, use a MockDatabase that implements the same interface.
+   Reusability
+                                       :- You can write functions that accept the interface, and they will work for any type that implements
+
+Real-World Analogy
+                  
+                  Without interface:
+                                       You say, “Call Dog to speak, Call Cat to speak.” You must know each animal upfront.
+                  With interface:
+                                       You say, “I don’t care who the animal is, as long as it can speak, I’ll call speak().”
