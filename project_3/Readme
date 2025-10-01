@@ -1,0 +1,23 @@
+==> Question : Write a program to Build a Logger interface with console and file loggers.
+
+* 📝 What is a Logger?
+=>  A logger is a tool or component in software that records messages (called logs) about what a program is doing while it runs.
+    Think of it like a black box recorder in an airplane ✈️ — it keeps a history of events so developers, operators, or users can later check what happened.
+
+Why do we need a Logger?
+1.) Debugging → When something goes wrong, logs help you trace what happened.
+2.) Monitoring → Logs show system health (errors, warnings, performance).
+3.) Auditing → Logs prove what actions were taken (useful in security & compliance).
+4.) Communication → Instead of printing everything to the screen, logs can go to files, databases, monitoring systems (e.g., ELK stack,         Grafana, CloudWatch).
+
+
+* What is an Interface (quick recap)?
+==> In Go, an interface defines a set of methods that a type must implement.
+    It allows you to write generic code that can work with many different implementations without caring about the details.
+
+* Why use an Interface for Logger?
+=> Flexibility (Polymorphism): Write code once, and it works with any type of logger (console, file, cloud, etc.).
+=> Separation of Concerns: Keeps the “what” (logging) separate from the “how” (where logs go).
+=> Easy Extension: New loggers can be added without changing existing code.
+=> Testing Support: You can plug in a mock logger for unit tests instead of real files/console.
+=> Cleaner Code: Main logic doesn’t need to care about implementation details, only the interface.

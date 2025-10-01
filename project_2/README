@@ -1,0 +1,4 @@
+==> Question : Write a program to Implement a Payment interface for PayPal, Stripe, and Crypto.
+==> interface is a collection method , if a function define that method they can use the interface
+
+- In this question we have define to define the and interface with a method which define payment
