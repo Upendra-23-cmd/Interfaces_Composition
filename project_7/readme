@@ -1,0 +1,11 @@
+==> Question : Write a program to Clone io.Reader/Writer with custom types implementing interface
+
+==> Understanding the problem
+
+* io.Reader: Anything that implements the Read(p []byte) (n int, err error) method.
+* io.Writer: Anything that implements the Write(p []byte) (n int, err error) method.
+
+==> Cloning here means: we want to duplicate the data being read or written, so multiple consumers can read/write the same data.
+
+* Why custom types?
+:- Because Go interfaces allow flexibility: we can wrap any Reader/Writer and extend functionality (like logging, cloning, buffering).
